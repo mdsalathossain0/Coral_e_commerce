@@ -2,4 +2,8 @@
 
 @theme {
   --spacing-container: 1320px; 
+  --text-50p: 50px; 
+
+   --font-san: "Open Sans"; 
+   --font-robo: "Roboto"; 
 }

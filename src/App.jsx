@@ -4,6 +4,8 @@ import Flex from './components/Flex'
 import Image from './components/Image'
 
 import card from './assets/card.png'
+import List from './components/List'
+import Heading from './components/Heading'
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
           <h1>hello</h1>
         </Flex>
         <Image src={card}/>
+        <List text='hello'/>
+        <Heading text='hellllo'/>
       </Container>
     </div>
   )
