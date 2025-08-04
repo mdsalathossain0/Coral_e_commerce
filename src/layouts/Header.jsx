@@ -9,20 +9,20 @@ import { FaShoppingBag } from 'react-icons/fa'
 
 const Header = () => {
   return (
-    <header className='bg-first py-5 lg:py-7 px-4'>
+    <header className='bg-white py-5 lg:py-7 px-4 border-b border-first'>
 
         <Container>
             <Flex className='justify-between items-center'>
-                <div><IoSearchSharp className='text-lg'/></div>
-                <div><Image src={Logo}/></div>
+                <div ><IoSearchSharp className='text-lg'/></div>
+                <div ><div className='w-[100px] lg:w-full'><Image src={Logo}/></div></div>
                 <div className='flex gap-x-6 items-center'>
                     <Flex className='gap-x-3 items-center'>
                         <IoPerson />
-                        <p className='text-lg text-black font-robo font-normal hidden md:block'>Account</p>
+                        <p className='text-lg text-second font-robo font-normal hidden lg:block'>Account</p>
                     </Flex>
                     <Flex className='gap-x-3 items-center'>
                         <FaShoppingBag />
-                        <p className='text-lg text-black font-robo font-normal hidden md:block'>Shopping</p>
+                        <p className='text-lg text-second font-robo font-normal hidden lg:block'>Shopping</p>
                     </Flex>
                 </div>
             </Flex>
