@@ -9,7 +9,7 @@ import { FaShoppingBag } from 'react-icons/fa'
 
 const Header = () => {
   return (
-    <header className='bg-white py-5 lg:py-7 px-4 border-b border-first'>
+    <header className='bg-[#0000001a] py-5 lg:py-7 px-4 border-b border-first'>
 
         <Container>
             <Flex className='justify-between items-center'>
