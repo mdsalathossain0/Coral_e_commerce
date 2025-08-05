@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../layouts/Header'
 import Navber from '../layouts/Navber'
 import Banner from '../layouts/Banner'
+import Brand from '../layouts/Brand'
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
     <Header/>
     <Navber/>
     <Banner/>
+    <Brand/>
     </>
   )
 }
