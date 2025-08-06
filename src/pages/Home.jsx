@@ -4,6 +4,7 @@ import Navber from '../layouts/Navber'
 import Banner from '../layouts/Banner'
 import Brand from '../layouts/Brand'
 import Style from '../layouts/Style'
+import Item from '../layouts/Item'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
     <Banner/>
     <Brand/>
     <Style/>
+    <Item/>
     </>
   )
 }

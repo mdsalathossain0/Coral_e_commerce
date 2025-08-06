@@ -15,14 +15,14 @@ const Style = () => {
         <Container>
             <Flex className='gap-x-6 flex-col lg:flex-row gap-y-6 lg:gap-y-0'>
                 <div className='w-full lg:w-1/2'>
-                    <div className='h-[400px] lg:h-[648px]'><Image className='w-full h-full' src={Card}/></div>
+                    <div className='h-[400px] md:h-[500px] lg:h-[648px]'><Image className='w-full h-full' src={Card}/></div>
                 </div>
-                <div className='w-full lg:w-1/2'>
-                    <Flex className='gap-6 flex-wrap'>
-                        <div className='w-[46%] lg:w-[48%] h-[200px] lg:h-[312px]'><Image className='w-full h-full' src={Card1}/></div>
-                        <div className='w-[46%] lg:w-[48%] h-[200px] lg:h-[312px]'><Image className='w-full h-full' src={Card2}/></div>
-                        <div className='w-[46%] lg:w-[48%] h-[200px] lg:h-[312px]'><Image className='w-full h-full' src={Card3}/></div>
-                        <div className='w-[46%] lg:w-[48%] h-[200px] lg:h-[312px]'><Image className='w-full h-full' src={Card4}/></div>
+                <div className='w-full lg:w-1/2 '>
+                    <Flex className='gap-6 flex-wrap justify-center'>
+                        <div className='w-[46%] lg:w-[48%] h-[200px] md:h-[240px] lg:h-[312px]'><Image className='w-full h-full' src={Card1}/></div>
+                        <div className='w-[46%] lg:w-[48%] h-[200px] md:h-[240px] lg:h-[312px]'><Image className='w-full h-full' src={Card2}/></div>
+                        <div className='w-[46%] lg:w-[48%] h-[200px] md:h-[240px] lg:h-[312px]'><Image className='w-full h-full' src={Card3}/></div>
+                        <div className='w-[46%] lg:w-[48%] h-[200px] md:h-[240px] lg:h-[312px]'><Image className='w-full h-full' src={Card4}/></div>
                     </Flex>
                 </div>
             </Flex>

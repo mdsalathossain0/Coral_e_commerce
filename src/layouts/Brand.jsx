@@ -14,7 +14,7 @@ const Brand = () => {
             <section className='py-8 lg:py-15 px-4 '>
                 <Container>
                     <div className="relative w-full overflow-hidden">
-                        <div className="flex justify-between animate-marquee-bounce whitespace-nowrap ">
+                        <div className="flex justify-between animate-marquee-bounce ">
                             <Image src={Brand1} alt="brand" className= "h-[50px] lg:h-16 w-auto" />
                             <Image src={Brand2} alt="brand" className= "h-[50px] lg:h-16 w-auto" />
                             <Image src={Brand3} alt="brand" className= "h-[50px] lg:h-16 w-auto" />
