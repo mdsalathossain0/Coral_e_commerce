@@ -7,8 +7,12 @@ import Logo from '../assets/logo.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import Footerlist from '../components/Footerlist'
 
+import Payment from '../assets/payment.png'
+import { IoIosArrowRoundUp } from 'react-icons/io'
+
 const Footer = () => {
   return (
+    <>
     <section className='py-10 lg:py-15 px-4'>
         <Container>
             <Flex className='flex-col lg:flex-row gap-y-6 lg:gap-y-0'>
@@ -55,6 +59,24 @@ const Footer = () => {
             </Flex>
         </Container>
     </section>
+    <section className='bg-black py-5'>
+        <Container>
+            <Flex className='flex-col lg:flex-row items-center gap-y-5 lg:gap-y-0 lg:justify-between'>
+                <div>
+                    <p className='text-base text-white font-normal font-san'>© 2022 Coral , Inc.</p>
+                </div>
+                <div>
+                    
+                    <Image src={Payment}/>
+
+                </div>
+                <div>
+                    <span className='text-base text-white font-normal font-san flex items-center gap-x-2'>Scroll to top <IoIosArrowRoundUp className='text-lg font-bold'/></span>
+                </div>
+            </Flex>
+        </Container>
+    </section>
+    </>
   )
 }
 
