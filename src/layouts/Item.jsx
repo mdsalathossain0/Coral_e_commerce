@@ -27,7 +27,11 @@ const Item = () => {
                      </div>
             </Flex>
 
-            <Flex className='justify-between'>
+            <Flex className='gap-6 flex-wrap justify-center'>
+                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
+                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
+                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
+                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
                 <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
                 <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
                 <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>

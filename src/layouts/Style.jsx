@@ -8,11 +8,13 @@ import Card1 from '../assets/card1.png'
 import Card2 from '../assets/card2.png'
 import Card3 from '../assets/card3.png'
 import Card4 from '../assets/card4.png'
+import Heading from '../components/Heading'
 
 const Style = () => {
   return (
     <section className='py-10 lg:py-15 px-4'>
         <Container>
+            <Heading className='text-center pb-10' text='Explore new and popular styles'/>
             <Flex className='gap-x-6 flex-col lg:flex-row gap-y-6 lg:gap-y-0'>
                 <div className='w-full lg:w-1/2'>
                     <div className='h-[400px] md:h-[500px] lg:h-[648px]'><Image className='w-full h-full' src={Card}/></div>

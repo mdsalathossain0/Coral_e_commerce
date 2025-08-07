@@ -7,7 +7,7 @@ import { FaBagShopping } from 'react-icons/fa6'
 
 const Card = ({title, price, category, src }) => {
   return (
-    <div className='w-[312px] h-[478px] relative group border border-[#0000001a]'>
+    <div className='w-[300px] h-[478px] relative group border border-[#0000001a]'>
         <div className='w-full h-[330px]'><Image className='w-full h-full' src={src}/></div>
         <p className='text-black text-base font-semibold font-san px-4 pt-8'>{title}</p>
         <Flex className='px-4 justify-between pt-5'>
