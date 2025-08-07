@@ -8,6 +8,7 @@ import Item from '../layouts/Item'
 import Collection from '../layouts/Collection'
 import BestSeller from '../layouts/BestSeller'
 import Products from '../layouts/Products'
+import Footer from '../layouts/Footer'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
     <Collection/>
     <BestSeller/>
     <Products/>
+    <Footer/>
     </>
   )
 }
