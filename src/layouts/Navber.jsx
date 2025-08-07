@@ -13,7 +13,7 @@ const Navber = () => {
     }
     return (
         <>
-            <nav className='bg-[#0000001a] py-7 px-4 hidden lg:block'>
+            <nav className='bg-third py-7 px-4 hidden lg:block'>
                 <Container>
                     <Flex className='justify-between items-center'>
                         <List text='Jewelry & Accessories' />
@@ -27,7 +27,7 @@ const Navber = () => {
                 </Container>
             </nav>
 
-            <nav className='bg-[#0000001a] py-3 block lg:hidden '>
+            <nav className='bg-third py-3 block lg:hidden '>
                 {
                     show ? <FaChevronUp className='absolute top-[58px] left-1/2 -transform-y-[50%]' onClick={handleClick} /> :<FaChevronDown className='absolute top-[58px] left-1/2 -transform-y-[50%]' onClick={handleClick} />  
 
