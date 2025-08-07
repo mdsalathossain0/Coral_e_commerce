@@ -5,6 +5,7 @@ import Banner from '../layouts/Banner'
 import Brand from '../layouts/Brand'
 import Style from '../layouts/Style'
 import Item from '../layouts/Item'
+import Collection from '../layouts/Collection'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
     <Brand/>
     <Style/>
     <Item/>
+    <Collection/>
     </>
   )
 }

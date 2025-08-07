@@ -18,6 +18,7 @@ const Card = ({title, price, category, src }) => {
             <FaRegHeart className='text-white'/> 
             <span className='flex gap-x-3 items-center'><FaBagShopping className='text-white'/> <span className='text-white text-sm font-semibold font-san'>Shop Now</span></span>
         </div>
+        <span className='bg-black py-1 px-2 text-sm text-white font-semibold font-san absolute top-5 left-0'>Sale</span>
     </div>
   )
 }
