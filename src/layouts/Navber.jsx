@@ -34,7 +34,7 @@ const Navber = () => {
                 }
                 {
                     show &&
-                    <div className='bg-white absolute top-[85px]  w-full py-5'>
+                    <div className='bg-first absolute top-[85px]  w-full py-5'>
                         <Flex className='flex-col gap-y-5 items-center'>
                             <List text='Jewelry & Accessories' />
                             <List text='Clothing & Shoes' />
