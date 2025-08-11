@@ -7,6 +7,7 @@ import { IoPerson, IoSearchSharp } from 'react-icons/io5'
 import Logo from '../assets/logo.png'
 import { FaShoppingBag } from 'react-icons/fa'
 import { RxCross2 } from 'react-icons/rx'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     let [show, setShow] = useState(false)
@@ -60,7 +61,7 @@ const Header = () => {
 
 
                                     <div className='flex gap-x-3 lg:gap-x-5 pt-12 lg:pt-20 pb-12 lg:pb-20 justify-center'>
-                                        <button className='text-sm font-bold font-san py-4 px-3 md:px-8 lg:px-10 text-black bg-white border border-transparent hover:bg-transparent hover:text-white hover:border-white'>View cart</button>
+                                        <Link to='/cartpage'><button className='text-sm font-bold font-san py-4 px-3 md:px-8 lg:px-10 text-black bg-white border border-transparent hover:bg-transparent hover:text-white hover:border-white'>View cart</button></Link>
                                         <button className='text-sm font-bold font-san py-4 px-3 md:px-8 lg:px-10 text-black bg-white border border-transparent hover:bg-transparent hover:text-white hover:border-white'>Checkout</button>
                                     </div>
                                     <p className='text-lg md:text-xl lg:text-2xl text-white font-semibold py-5 text-right pr-5 '>Total: $50</p>

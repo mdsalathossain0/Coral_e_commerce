@@ -6,7 +6,7 @@ import Image from '../components/Image'
 
 import image1 from '../assets/12.png'
 
-const Card = () => {
+const CartPage = () => {
   return (
        <section className='py-10 lg:py-20 px-5 '>
   <Container>
@@ -85,4 +85,4 @@ const Card = () => {
   )
 }
 
-export default Card
+export default CartPage
