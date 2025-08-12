@@ -16,6 +16,7 @@ const Style = () => {
   return (
     <section className='py-10 lg:py-15 px-4'>
         <Container>
+     
             <Heading className='text-center pb-10' text='Explore new and popular styles'/>
             <Flex className='gap-x-6 flex-col lg:flex-row gap-y-6 lg:gap-y-0'>
                 <div className='w-full lg:w-1/2'>

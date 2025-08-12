@@ -20,7 +20,7 @@ const Header = () => {
             <Container>
                 <Flex className='justify-between items-center'>
                     <div ><IoSearchSharp className='text-lg' /></div>
-                    <div ><div className='w-[100px] lg:w-full'><Image src={Logo} /></div></div>
+                    <div ><Link to='/'><div className='w-[100px] lg:w-full'><Image src={Logo} /></div></Link></div>
                     <div className='flex gap-x-6 items-center'>
                         <Flex className='gap-x-3 items-center'>
                             <IoPerson />
