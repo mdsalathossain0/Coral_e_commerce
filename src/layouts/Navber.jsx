@@ -23,13 +23,13 @@ const Navber = () => {
             <nav className='bg-third py-7 px-4 hidden lg:block'>
                 <Container>
                     <Flex className='justify-between items-center'>
-                         <Link onClick={()=>handleBread('Jewelry & Accessories')} to='/jewelryaccessories'><List text='Jewelry & Accessories' /></Link>
-                            <Link onClick={()=>handleBread('Clothing & Shoes')} to='/clothingshoes'><List text='Clothing & Shoes' /></Link>
-                            <Link onClick={()=>handleBread('Home & Living')} to='/homeliving'><List text='Home & Living' /></Link>
-                            <Link onClick={()=>handleBread('Wedding & Party')} to='/weddingparty'><List text='Wedding & Party' /></Link>
-                            <Link onClick={()=>handleBread('Toys & Entertainment')} to='/toyentertainment'><List text='Toys & Entertainment' /></Link>
-                            <Link onClick={()=>handleBread('Art & Collectibles')} to='/artcollectibles'><List text='Art & Collectibles' /></Link>
-                            <Link onClick={()=>handleBread('Craft Supplies & Tools')} to='/craftsuppliestools'><List text='Craft Supplies & Tools' /></Link>
+                         <Link onClick={()=>handleBread('jewelryaccessories')} to='/jewelryaccessories'><List text='Jewelry & Accessories' /></Link>
+                            <Link onClick={()=>handleBread('clothingshoes')} to='/clothingshoes'><List text='Clothing & Shoes' /></Link>
+                            <Link onClick={()=>handleBread('homeliving')} to='/homeliving'><List text='Home & Living' /></Link>
+                            <Link onClick={()=>handleBread('weddingparty')} to='/weddingparty'><List text='Wedding & Party' /></Link>
+                            <Link onClick={()=>handleBread('toyentertainment')} to='/toyentertainment'><List text='Toys & Entertainment' /></Link>
+                            <Link onClick={()=>handleBread('artcollectibles')} to='/artcollectibles'><List text='Art & Collectibles' /></Link>
+                            <Link onClick={()=>handleBread('craftsuppliestools')} to='/craftsuppliestools'><List text='Craft Supplies & Tools' /></Link>
                     </Flex>
                 </Container>
             </nav>
