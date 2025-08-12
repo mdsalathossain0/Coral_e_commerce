@@ -9,18 +9,13 @@ import Card2 from '../assets/card2.png'
 import Card3 from '../assets/card3.png'
 import Card4 from '../assets/card4.png'
 import Heading from '../components/Heading'
-import { useDispatch, useSelector } from 'react-redux'
-import { increment, decrement } from '../slice/counterSlice'
+
 
 const Style = () => {
-    let dispatch = useDispatch()
-    let data = useSelector((state)=>state.count.value)
+
   return (
     <section className='py-10 lg:py-15 px-4'>
         <Container>
-            <h1>{data}</h1>
-            <button onClick={()=>dispatch(increment(1))}>increment</button>
-            <button onClick={()=>dispatch(decrement(1))}>deccrement</button>
             <Heading className='text-center pb-10' text='Explore new and popular styles'/>
             <Flex className='gap-x-6 flex-col lg:flex-row gap-y-6 lg:gap-y-0'>
                 <div className='w-full lg:w-1/2'>
