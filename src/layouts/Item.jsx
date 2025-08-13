@@ -7,6 +7,7 @@ import Card from '../components/Card'
 
 
 import image from '../assets/12.png'
+import Paginate from '../components/Paginate'
 
 const Item = () => {
   return (
@@ -27,16 +28,9 @@ const Item = () => {
                      </div>
             </Flex>
 
-            <Flex className='gap-6 flex-wrap justify-center'>
-                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-            </Flex>
+            <div>
+                <Paginate itemsPerPage={8} />
+            </div>
         </Container>
     </section>
   )
