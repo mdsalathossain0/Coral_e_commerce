@@ -25,7 +25,7 @@ const BestSeller = () => {
                         </span>
                     </div>
                 </Flex>
-                <Flex className='gap-6 flex-wrap justify-center'>
+                <Flex className='gap-6 flex-wrap justify-center md:justify-start'>
                     <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
                     <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
                     <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>

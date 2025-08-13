@@ -10,7 +10,7 @@ const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 function Items({ currentItems }) {
   return (
     <>
-      <div className='flex gap-6 flex-wrap'>
+      <div className='flex gap-6 flex-wrap justify-center md:justify-start'>
         {currentItems &&
         currentItems.map((item) => (
           <div>
@@ -42,7 +42,8 @@ function Paginate({ itemsPerPage }) {
   return (
     <>
       <Items currentItems={currentItems} />
-      <ReactPaginate
+      <div className='pt-12'>
+        <ReactPaginate
         breakLabel="..."
         nextLabel=""
         onPageChange={handlePageClick}
@@ -50,7 +51,11 @@ function Paginate({ itemsPerPage }) {
         pageCount={pageCount}
         previousLabel=""
         renderOnZeroPageCount={null}
+        containerClassName="flex"
+        pageLinkClassName="border border-[#0000001a] py-2 px-3 text-black mr-4"
+        activeLinkClassName="bg-black text-white"
       />
+      </div>
     </>
   );
 }
