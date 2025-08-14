@@ -41,7 +41,7 @@ const ProductDetails = () => {
 
                         if(item.title==singleProducts.title){
                           return   <>
-                 <div className='w-full md:w-[400px] h-[230px] md:h-[300px] mt-10 lg:mt-20'><Image className='w-full h-full' src={image1}/></div>
+                 <div className='w-full md:w-[400px] h-[230px] md:h-[300px] mt-10 lg:mt-20'><Image className='w-full h-full' src={item.thumbnail}/></div>
                  <h4 className='text-2xl md:text-[28px] lg:text-[39px] text-sblack font-bold font-san pt-5'>{item.title}</h4>
             <Flex className='gap-x-6 items-center pt-4 pb-6'>
                 <ul className='flex gap-x-[2px] '>
@@ -51,11 +51,11 @@ const ProductDetails = () => {
                     <li className='text-sm text-[#FFD881]'><FaStar /></li>
                     <li className='text-sm text-[#FFD881]'><FaStar /></li>
                 </ul>
-                <p className='text-sm text-fivth font-normal font-san'>1 Review</p>
+                <p className='text-sm text-fivth font-normal font-san'>{item.reviews.length} Review</p>
             </Flex>
             <Flex className=' gap-x-[22px] items-center pb-7 border-b-3 border-sixth w-full lg:w-[49%]'>
-                <h5 className= 'text-sm lg:text-base text-fivth font-normal font-san'><del>$88.00</del></h5>
-                <h5 className='text-base md:text-lg lg:text-xl text-sblack font-bold font-san'>$5</h5>
+                <h5 className= 'text-sm lg:text-base text-fivth font-normal font-san'><del>{item.discountPercentage}%</del></h5>
+                <h5 className='text-base md:text-lg lg:text-xl text-sblack font-bold font-san'>${item.price}</h5>
             </Flex>
             <Flex className='gap-x-13 items-center pt-14'>
                 <h4 className='text-sm lg:text-base text-sblack font-bold font-san leading-6'>COLOR:</h4>
@@ -86,7 +86,7 @@ const ProductDetails = () => {
             </Flex>
             <Flex className='gap-x-7 items-center pt-14 pb-7 border-b-3 border-sixth w-full lg:w-[49%]'>
                 <h4 className='text-sm lg:text-base text-sblack font-bold font-san leading-6'>STATUS:</h4>
-                <p className='text-base text-black font-normal font-san leading-7'>In Stock</p>
+                <p className='text-base text-black font-normal font-san leading-7'>{item.stock} Stock</p>
                 
             </Flex>
             
@@ -99,10 +99,10 @@ const ProductDetails = () => {
                         detail && 
                         <>
                         <ul className='flex flex-col gap-y-5'>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>Brand: yes</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>Model: 7736</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>Weight: 100 gm</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>Warranty: no</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>Brand: {item.brand}</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>Model: {item.sku}</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>Weight: {item.weigh} gm</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>Warranty: {item.warrantyInformation}</li>
                         </ul>
                         </>
                     }
@@ -116,13 +116,13 @@ const ProductDetails = () => {
                 detail2 && 
                 <>
                 <ul className='flex flex-col gap-y-5'>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>ShippingInformation: hmmm</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>ReturnPolicy: hello</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>ShippingInformation: {item.shippingInformation}</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-san leading-8'>ReturnPolicy: {item.returnPolicy}</li>
                         </ul>
                 </>
              }
             </div>
-            <p className='w-full lg:w-[49%] text-sm lg:text-base text-black font-normal font-san leading-8 pt-7 pb-15 lg:pb-[122px]'>hello</p>
+            <p className='w-full lg:w-[49%] text-sm lg:text-base text-black font-normal font-san leading-8 pt-7 pb-15 lg:pb-[122px]'>{item.description}</p>
             <Flex className='gap-x-15 pb-10'>
                 <div >
                     <h5  className='text-xl text-black font-normal font-san leading-7'>Description</h5>
