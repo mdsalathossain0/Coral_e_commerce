@@ -33,7 +33,7 @@ function Paginate({ itemsPerPage }) {
       setAllitem(data.data.products)
     }
     alldata()
-  },[])
+  },[data])
  
 
   const [itemOffset, setItemOffset] = useState(0);

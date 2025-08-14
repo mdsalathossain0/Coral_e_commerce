@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from '../components/Container'
 import Flex from '../components/Flex'
 import Heading from '../components/Heading'
@@ -6,8 +6,20 @@ import { MdFilterListAlt } from 'react-icons/md'
 import Card from '../components/Card'
 
 import image from '../assets/12.png'
+import axios from 'axios'
 
 const BestSeller = () => {
+
+    let [allitem,setAllitem]=useState([])
+
+    useEffect(()=>{
+       async function alldata(){
+            let data =await axios.get('https://dummyjson.com/products')
+            setAllitem(data.data.products)
+        }
+        alldata()
+    },[])
+
     return (
         <section className='py-10 lg:py-15 px-4'>
             <Container>
@@ -26,10 +38,14 @@ const BestSeller = () => {
                     </div>
                 </Flex>
                 <Flex className='gap-6 flex-wrap justify-center md:justify-start'>
-                    <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                    <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                    <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
-                    <Card title='Nike Air Zoom Pegasus' category='bag' price='$ 12.99' src={image}/>
+                    {
+                        allitem.map((item,index)=>(
+                            index>=9 && index<=12 &&
+
+                            <Card title={item.title} category={item.category} price={item.price} src={item.thumbnail}/>
+                        ))
+                    }
+                    
                 </Flex>
             </Container>
         </section>
