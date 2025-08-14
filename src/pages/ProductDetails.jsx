@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdAdd } from 'react-icons/md'
 import { RxCross2 } from 'react-icons/rx'
 import Container from '../components/Container'
@@ -7,8 +7,12 @@ import Flex from '../components/Flex'
 
 import image1 from '../assets/12.png'
 import Image from '../components/Image'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 const ProductDetails = () => {
+    let singleProducts = useParams()
+    let [allitem, setAllItem] = useState([])
     let [detail, setDetail]=useState(false)
     let [detail2, setDetail2]=useState(false)
     let handleDetails=()=>{
@@ -18,13 +22,27 @@ const ProductDetails = () => {
         setDetail2(!detail2)
         
     }
+    useEffect(()=>{
+        window.scrollTo({top:0})
+    },[])
+
+    useEffect(()=>{
+       async function alldata(){
+            let data = await axios.get('https://dummyjson.com/products')
+            setAllItem(data.data.products)
+        }
+        alldata()
+    },[])
   return (
     <section className='py-15 lg:py-20 px-5'>
         <Container>
-                
-                 <>
+                {
+                    allitem.map(item=>{
+
+                        if(item.title==singleProducts.title){
+                          return   <>
                  <div className='w-full md:w-[400px] h-[230px] md:h-[300px] mt-10 lg:mt-20'><Image className='w-full h-full' src={image1}/></div>
-                 <h4 className='text-2xl md:text-[28px] lg:text-[39px] text-sblack font-bold font-san pt-5'>Title</h4>
+                 <h4 className='text-2xl md:text-[28px] lg:text-[39px] text-sblack font-bold font-san pt-5'>{item.title}</h4>
             <Flex className='gap-x-6 items-center pt-4 pb-6'>
                 <ul className='flex gap-x-[2px] '>
                     <li className='text-sm text-[#FFD881]'><FaStar /></li>
@@ -134,7 +152,12 @@ const ProductDetails = () => {
             
                 </>
                 
+                        }
+                       
             
+                    })
+                }
+                 
         
 
             

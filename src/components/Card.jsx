@@ -3,13 +3,14 @@ import Flex from './Flex'
 import Image from './Image'
 import { FaRegHeart } from 'react-icons/fa'
 import { FaBagShopping } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 
 const Card = ({title, price, category, src }) => {
   return (
     <div className='w-[310px] h-[452px] relative group border border-[#0000001a] '>
         <div className='w-full h-[300px] lg:h-[330px]'><Image className='w-full h-full' src={src}/></div>
-        <p className='text-black text-base font-semibold font-san px-4 pt-5 lg:pt-8'>{title}</p>
+        <Link to={`/productdetail/${title}`}><p className='text-black text-base font-semibold font-san px-4 pt-5 lg:pt-8'>{title}</p></Link>
         <Flex className='px-4 justify-between pt-3'>
             <span className='text-[#00000080] text-base font-normal font-san'>{category}</span>
             <span className='text-black text-base font-semibold font-san '>{price}</span>
