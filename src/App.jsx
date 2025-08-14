@@ -10,6 +10,7 @@ import ArtCollectibles from './pages/ArtCollectibles';
 import CraftSuppliesTools from './pages/CraftSuppliesTools';
 import JewelryAccessories from './pages/JewelryAccessories';
 import RootLayout from './layouts/RootLayout';
+import ProductDetails from './pages/ProductDetails';
 
 const router = createBrowserRouter(createRoutesFromElements(
     <>
@@ -23,6 +24,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/toyentertainment" element={<ToysEntertainment />}></Route>
     <Route path="/artcollectibles" element={<ArtCollectibles />}></Route>
     <Route path="/craftsuppliestools" element={<CraftSuppliesTools />}></Route>
+    <Route path="/productdetail" element={<ProductDetails />}></Route>
     </Route>
     </>
   )
