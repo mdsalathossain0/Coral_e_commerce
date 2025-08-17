@@ -32,10 +32,18 @@ export const addToCard = createSlice({
         })
 
     },
+    remove:(state,action)=>{
+        state.value.map((item,index)=>{
+            if(item.title===action.payload.title){
+            state.value.splice(index,1)
+        }
+        })
+
+    },
   },
 })
 
 
-export const { addtocard,increment,decrement} = addToCard.actions
+export const { addtocard,increment,decrement,remove} = addToCard.actions
 
 export default addToCard.reducer

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from '../components/Container'
 import Heading from '../components/Heading'
 import Flex from '../components/Flex'
@@ -11,6 +11,7 @@ import { decrement, increment } from '../slice/addToCard'
 const CartPage = () => {
   let dispatch = useDispatch()
   let data = useSelector((state) => state.cart.value)
+  let [alltotal, setAlltotal]=useState(0)
 
   let handleIncrement = (item) => {
     dispatch(increment(item))
@@ -19,6 +20,13 @@ const CartPage = () => {
   let handleDecrement = (item) => {
     dispatch(decrement(item))
   }
+  useEffect(()=>{
+          let total = 0
+          data.map(item=>{
+               total += item.price*item.quantity
+          })
+          setAlltotal(total)
+      },[data])
   return (
     <section className='py-10 lg:py-20 px-5 '>
       <Container>
@@ -82,11 +90,11 @@ const CartPage = () => {
             <tbody>
               <tr>
                 <td className='px-5 py-4 border border-black font-bold text-black'>Subtotal</td>
-                <td className='px-5 py-4 border border-black textblack'>$45</td>
+                <td className='px-5 py-4 border border-black textblack'>${alltotal}</td>
               </tr>
               <tr>
                 <td className='px-5 py-4 border border-black font-bold text-black'>Total</td>
-                <td className='px-5 py-4 border border-black text-black'>$5</td>
+                <td className='px-5 py-4 border border-black text-black'>${alltotal}</td>
               </tr>
             </tbody>
           </table>
