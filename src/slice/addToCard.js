@@ -14,11 +14,28 @@ export const addToCard = createSlice({
         
     },
     
+    increment:(state,action)=>{
+        state.value.map(item=>{
+            if(item.title===action.payload.title){
+            item.quantity+=1
+        }
+        })
 
+    },
+    decrement:(state,action)=>{
+        state.value.map(item=>{
+            if(item.title===action.payload.title){
+            if(item.quantity>1){
+                item.quantity-=1
+            }
+        }
+        })
+
+    },
   },
 })
 
 
-export const { addtocard} = addToCard.actions
+export const { addtocard,increment,decrement} = addToCard.actions
 
 export default addToCard.reducer
