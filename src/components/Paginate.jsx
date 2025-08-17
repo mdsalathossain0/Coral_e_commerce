@@ -15,7 +15,7 @@ function Items({ currentItems }) {
         {currentItems &&
         currentItems.map((item) => (
           <div>
-            <Card title={item.title} category={item.category} price='$ 12.99' src={item.thumbnail}/>
+            <Card title={item.title} category={item.category} price={item.price} src={item.thumbnail}/>
           </div>
         ))}
       </div>
