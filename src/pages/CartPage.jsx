@@ -6,7 +6,7 @@ import Image from '../components/Image'
 
 import image1 from '../assets/12.png'
 import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment } from '../slice/addToCard'
+import { decrement, increment, remove } from '../slice/addToCard'
 
 const CartPage = () => {
   let dispatch = useDispatch()
@@ -20,6 +20,11 @@ const CartPage = () => {
   let handleDecrement = (item) => {
     dispatch(decrement(item))
   }
+
+  let handleRemove = (item) => {
+    dispatch(remove(item))
+  }
+
   useEffect(()=>{
           let total = 0
           data.map(item=>{
@@ -43,9 +48,10 @@ const CartPage = () => {
 
         {
           data.map(item => (
+           
             <Flex className='flex flex-col md:flex-row items-start md:items-center border border-sixth py-5 px-4 gap-4 md:gap-0'>
               <div className='flex items-center gap-4 w-full md:w-1/4'>
-                <div className='text-base text-black font-bold cursor-pointer'>x</div>
+                <div onClick={() => handleRemove(item)} className='text-base text-black font-bold cursor-pointer'>x</div>
                 <div className='w-[80px] h-[80px]'><Image className='w-full h-full object-cover' src={item.image} /></div>
                 <p className='text-base text-black font-bold'>{item.title}</p>
               </div>

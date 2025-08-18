@@ -5,10 +5,10 @@ import Container from '../components/Container'
 import { FaStar } from 'react-icons/fa'
 import Flex from '../components/Flex'
 
-import image1 from '../assets/12.png'
 import Image from '../components/Image'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+
 
 const ProductDetails = () => {
     let singleProducts = useParams()
@@ -22,6 +22,7 @@ const ProductDetails = () => {
         setDetail2(!detail2)
         
     }
+  
     useEffect(()=>{
         window.scrollTo({top:0})
     },[])
