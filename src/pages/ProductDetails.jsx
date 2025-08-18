@@ -41,7 +41,7 @@ const ProductDetails = () => {
 
                         if(item.title==singleProducts.title){
                           return   <>
-                 <div className='w-full md:w-[400px] h-[230px] md:h-[300px] mt-10 lg:mt-20'><Image className='w-full h-full' src={item.thumbnail}/></div>
+                 <div className='w-[280px] md:w-[400px] h-[230px] md:h-[300px] mt-10 lg:mt-20'><Image className='w-full h-full' src={item.thumbnail}/></div>
                  <h4 className='text-2xl md:text-[28px] lg:text-[39px] text-sblack font-bold font-san pt-5'>{item.title}</h4>
             <Flex className='gap-x-6 items-center pt-4 pb-6'>
                 <ul className='flex gap-x-[2px] '>
